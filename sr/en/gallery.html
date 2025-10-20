@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arsenijević - Galerija</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="mca.png" alt="Logo Arsenijević" id="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="lang" data-sr="Početna" data-en="Home" data-de="Startseite">Početna</a></li>
+        <li><a href="services.html" class="lang" data-sr="Usluge" data-en="Services" data-de="Dienstleistungen">Usluge</a></li>
+        <li><a href="gallery.html" class="lang" data-sr="Galerija" data-en="Gallery" data-de="Galerie">Galerija</a></li>
+        <li><a href="contact.html" class="lang" data-sr="Kontakt" data-en="Contact" data-de="Kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div id="language-switch">
+      <button onclick="setLanguage('sr')">SR</button>
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('de')">DE</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="lang" data-sr="Galerija" data-en="Gallery" data-de="Galerie">Galerija</h1>
+    <div id="gallery-grid">
+      <img src="mca1.png" alt="Mašinska obrada 1">
+      <img src="mca2.png" alt="Mašinska obrada 2">
+      <img src="mca3.png" alt="Mašinska obrada 3">
+      <img src="mca4.png" alt="Mašinska obrada 4">
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
