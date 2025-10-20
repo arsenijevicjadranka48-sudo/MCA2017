@@ -1,52 +1,29 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metal Čačak</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arsenijević - Mašinska obrada</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <h1>Metal Čačak</h1>
-        <nav>
-            <a href="#about" onclick="loadSection('about')">O Nama</a>
-            <a href="#services" onclick="loadSection('services')">Usluge</a>
-            <a href="#gallery" onclick="loadSection('gallery')">Galerija</a>
-            <a href="#contact" onclick="loadSection('contact')">Kontakt</a>
-        </nav>
+  <header>
+    <img src="mca.png" alt="Logo Arsenijević" id="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="lang" data-sr="Početna" data-en="Home" data-de="Startseite">Početna</a></li>
+        <li><a href="services.html" class="lang" data-sr="Usluge" data-en="Services" data-de="Dienstleistungen">Usluge</a></li>
+        <li><a href="gallery.html" class="lang" data-sr="Galerija" data-en="Gallery" data-de="Galerie">Galerija</a></li>
+        <li><a href="contact.html" class="lang" data-sr="Kontakt" data-en="Contact" data-de="Kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div id="language-switch">
+      <button onclick="setLanguage('sr')">SR</button>
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('de')">DE</button>
+    </div>
+  </header>
 
-        <!-- Jezički izbor -->
-        <div class="language-switch">
-            <button onclick="setLanguage('sr')">SR</button>
-            <button onclick="setLanguage('en')">EN</button>
-            <button onclick="setLanguage('de')">DE</button>
-        </div>
-    </header>
-
-    <!-- Sekcije -->
-    <div id="about"></div>
-    <div id="services"></div>
-    <div id="gallery"></div>
-    <div id="contact"></div>
-
-    <script>
-        let currentLang = 'sr';
-
-        const setLanguage = (lang) => {
-            currentLang = lang;
-            ['about','services','gallery','contact'].forEach(loadSection);
-        };
-
-        const loadSection = (id) => {
-            fetch(`lang/${currentLang}/${id}.html`)
-                .then(res => res.text())
-                .then(html => document.getElementById(id).innerHTML = html)
-                .catch(err => console.error('Greška učitavanja sekcije:', err));
-        };
-
-        ['about','services','gallery','contact'].forEach(loadSection);
-    </script>
-</body>
-</html>
+  <main>
+    <section id="intro">
+      <h1 clas
