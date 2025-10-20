@@ -1,40 +1,55 @@
-<!-- Dugmad za jezike -->
-<div class="lang-buttons" style="text-align:right; margin: 10px;">
-  <button onclick="setLanguage('sr')">SR</button>
-  <button onclick="setLanguage('en')">EN</button>
-  <button onclick="setLanguage('de')">DE</button>
-</div>
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCAC 2017 Arsenijević</title>
+</head>
+<body>
+<header>
+  <img src="img/mca.png" alt="Logo" id="logo" style="height:60px;">
+  <nav>
+    <a href="#about" onclick="loadSection('about')">O Nama</a>
+    <a href="#services" onclick="loadSection('services')">Usluge</a>
+    <a href="#gallery" onclick="loadSection('gallery')">Galerija</a>
+    <a href="#contact" onclick="loadSection('contact')">Kontakt</a>
+  </nav>
+  <div>
+    <button onclick="setLanguage('sr')">SR</button>
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('de')">DE</button>
+  </div>
+</header>
+
+<div id="about"></div>
+<div id="services"></div>
+<div id="gallery"></div>
+<div id="contact"></div>
 
 <script>
-  const translations = {
-    sr: {
-      about: "O nama",
-      services: "Usluge",
-      gallery: "Galerija",
-      contact: "Kontakt",
-      intro: "Dobrodošli u MCA 2017 Arsenijević – vodeću firmu iz Čačka za obradu metala."
-    },
-    en: {
-      about: "About Us",
-      services: "Services",
-      gallery: "Gallery",
-      contact: "Contact",
-      intro: "Welcome to MCA 2017 Arsenijević – a leading metal processing company from Čačak."
-    },
-    de: {
-      about: "Über uns",
-      services: "Dienstleistungen",
-      gallery: "Galerie",
-      contact: "Kontakt",
-      intro: "Willkommen bei MCA 2017 Arsenijević – einem führenden Metallverarbeitungsunternehmen aus Čačak."
-    }
-  };
+let currentLang = 'sr';
+const setLanguage = (lang) => {
+  currentLang = lang;
+  ['about','services','gallery','contact'].forEach(loadSection);
+};
 
-  function setLanguage(lang) {
-    document.querySelector("a[href='#about']").textContent = translations[lang].about;
-    document.querySelector("a[href='#services']").textContent = translations[lang].services;
-    document.querySelector("a[href='#gallery']").textContent = translations[lang].gallery;
-    document.querySelector("a[href='#contact']").textContent = translations[lang].contact;
-    document.querySelector("#intro-text").textContent = translations[lang].intro;
+const loadSection = (id) => {
+  if(id === 'gallery'){
+    let html = '<section id="gallery"><h2>Galerija</h2><div>';
+    for(let i=1;i<=10;i++){
+      html += `<img src="img/mca${i}.jpg" alt="Mašinska obrada ${i}" style="width:200px;margin:5px;">`;
+    }
+    html += '</div></section>';
+    document.getElementById('gallery').innerHTML = html;
+  } else {
+    fetch(`lang/${currentLang}/${id}.html`)
+    .then(res => res.text())
+    .then(html => document.getElementById(id).innerHTML = html)
+    .catch(err => document.getElementById(id).innerHTML = "<p>Greška učitavanja sekcije.</p>");
   }
+};
+
+['about','services','gallery','contact'].forEach(loadSection);
 </script>
+</body>
+</html>
