@@ -1,64 +1,38 @@
-<section id="reviews">
-  <h2>Recenzije</h2>
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCA2017 – Mašinska obrada</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#222; scroll-behavior:smooth; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; position: relative; background:#333; color:white; }
+header .left { display: flex; align-items: center; gap: 10px; }
+header .right { display: flex; align-items: center; gap: 15px; position: relative; }
+nav { display: flex; gap: 15px; }
+nav a { color:white; text-decoration:none; font-weight:bold; }
+nav a:hover { text-decoration: underline; }
 
-  <div class="card review">
-    <p><strong>Marko P.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Odlična firma! Vrlo precizna obrada i profesionalan pristup.</p>
-  </div>
+.lang-container {
+  opacity: 0;             
+  transition: opacity 0.3s ease;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+header .right:hover .lang-container {
+  opacity: 1;             
+}
 
-  <div class="card review">
-    <p><strong>Jelena K.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Brza i kvalitetna izrada delova po crtežu, toplo preporučujem.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Ivan S.</strong></p>
-    <p class="stars">★★★★☆</p>
-    <p>Odlično iskustvo, tim je vrlo stručan i pouzdan.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Marija L.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Kvalitetna obrada metala i odlična komunikacija sa firmom.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Petar D.</strong></p>
-    <p class="stars">★★★★☆</p>
-    <p>Precizno i profesionalno, preporučujem za sve industrijske projekte.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Sanja M.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Vrlo zadovoljna saradnjom, rokovi su ispoštovani, a kvalitet odličan.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Nikola T.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Top profesionalci! Izrada po tehničkim crtežima bez greške.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Ivana R.</strong></p>
-    <p class="stars">★★★★☆</p>
-    <p>Odlična tehnička podrška i konsultacije tokom procesa.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Milan V.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Firma sa iskustvom i kvalitetom, preporuka za svakog ko traži preciznu obradu.</p>
-  </div>
-
-  <div class="card review">
-    <p><strong>Ana K.</strong></p>
-    <p class="stars">★★★★★</p>
-    <p>Brza realizacija i profesionalan pristup, zadovoljna sam saradnjom.</p>
-  </div>
-
-</section>
+.lang-btn { 
+  padding: 5px 10px; 
+  border:none; 
+  border-radius:5px; 
+  cursor:pointer; 
+  background:#555; 
+  color:white; 
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang-btn.active
