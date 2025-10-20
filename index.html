@@ -50,35 +50,3 @@ const translations = {
   en: {about:"About Us", services:"Services", gallery:"Gallery", contact:"Contact"},
   de: {about:"Über uns", services:"Dienstleistungen", gallery:"Galerie", contact:"Kontakt"}
 };
-
-function setLanguage(lang){
-  currentLang = lang;
-  document.querySelector("a[href='#about']").textContent = translations[lang].about;
-  document.querySelector("a[href='#services']").textContent = translations[lang].services;
-  document.querySelector("a[href='#gallery']").textContent = translations[lang].gallery;
-  document.querySelector("a[href='#contact']").textContent = translations[lang].contact;
-  sections.forEach(loadSection);
-}
-
-function loadSection(id){
-  if(id==='gallery'){
-    let html = '<section id="gallery"><h2>'+translations[currentLang].gallery+'</h2><div class="gallery-grid">';
-    for(let i=1;i<=10;i++){
-      html += '<img src="img/mca'+i+'.jpg" alt="Mašinska obrada '+i+'">';
-    }
-    html += '</div></section>';
-    document.getElementById('gallery').innerHTML = html;
-  } else {
-    fetch('lang/'+currentLang+'/'+id+'.html')
-      .then(res=>res.text())
-      .then(html=>document.getElementById(id).innerHTML=html)
-      .catch(err=>document.getElementById(id).innerHTML="<section><h2>"+translations[currentLang][id]+"</h2><p>Greška učitavanja sekcije.</p></section>");
-  }
-}
-
-// Učitaj sve sekcije na početku
-sections.forEach(loadSection);
-</script>
-
-</body>
-</html>
