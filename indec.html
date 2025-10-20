@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="bs">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCA Sajt</title>
+    <title>Metal Čačak</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- HEADER direktno -->
+    <!-- HEADER -->
     <header>
-        <h1>MCA Mašinska Obrada</h1>
+        <h1>Metal Čačak</h1>
         <nav>
             <a href="#about" onclick="loadSection('about')">O Nama</a>
             <a href="#services" onclick="loadSection('services')">Usluge</a>
@@ -17,7 +17,7 @@
             <a href="#contact" onclick="loadSection('contact')">Kontakt</a>
         </nav>
 
-        <!-- Dugmad za jezik -->
+        <!-- Jezički izbor -->
         <div class="language-switch">
             <button onclick="setLanguage('sr')">SR</button>
             <button onclick="setLanguage('en')">EN</button>
@@ -32,24 +32,21 @@
     <div id="contact"></div>
 
     <script>
-        let currentLang = 'sr'; // default srpski
+        let currentLang = 'sr';
 
         const setLanguage = (lang) => {
             currentLang = lang;
-            // Ponovo učitaj sve sekcije kada se promeni jezik
-            ['about', 'services', 'gallery', 'contact'].forEach(loadSection);
+            ['about','services','gallery','contact'].forEach(loadSection);
         };
 
         const loadSection = (id) => {
-            const file = `lang/${currentLang}/${id}.html`;
-            fetch(file)
-                .then(response => response.text())
+            fetch(`lang/${currentLang}/${id}.html`)
+                .then(res => res.text())
                 .then(html => document.getElementById(id).innerHTML = html)
                 .catch(err => console.error('Greška učitavanja sekcije:', err));
         };
 
-        // učitaj sve sekcije na početku
-        ['about', 'services', 'gallery', 'contact'].forEach(loadSection);
+        ['about','services','gallery','contact'].forEach(loadSection);
     </script>
 </body>
 </html>
