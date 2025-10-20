@@ -38,20 +38,110 @@
   </div>
 </header>
 
-<div id="about"></div>
-<div id="services"></div>
-<div id="gallery"></div>
-<div id="reviews"></div>
-<div id="contact"></div>
+<div id="about">
+  <section>
+    <h2>O nama</h2>
+    <p>MCAC 2017 Arsenijević je renomovana firma iz Čačka specijalizovana za preciznu obradu metala. Naš tim ima više od deset godina iskustva u industriji i posvećen je kvalitetu i inovacijama.</p>
+    <p>Koristimo savremene CNC mašine, laserske sisteme za sečenje i održavanje opreme kako bismo zadovoljili sve potrebe naših klijenata. Naša misija je da pružimo profesionalne i pouzdane usluge u obradi metala, od standardnih do kompleksnih projekata.</p>
+  </section>
+</div>
+
+<div id="services">
+  <section>
+    <h2>Usluge</h2>
+    <p>Pružamo širok spektar usluga u obradi metala, uključujući lasersko sečenje, CNC obradu, savijanje i zavarivanje. Naš tim se stalno usavršava kako bi garantovao najviši nivo preciznosti i efikasnosti.</p>
+  </section>
+</div>
+
+<div id="gallery">
+  <section>
+    <h2>Galerija</h2>
+    <div class="gallery-grid">
+      <img src="img/mca1.jpg" alt="Mašinska obrada 1">
+      <img src="img/mca2.jpg" alt="Mašinska obrada 2">
+      <img src="img/mca3.jpg" alt="Mašinska obrada 3">
+      <img src="img/mca4.jpg" alt="Mašinska obrada 4">
+      <img src="img/mca5.jpg" alt="Mašinska obrada 5">
+      <img src="img/mca6.jpg" alt="Mašinska obrada 6">
+      <img src="img/mca7.jpg" alt="Mašinska obrada 7">
+      <img src="img/mca8.jpg" alt="Mašinska obrada 8">
+      <img src="img/mca9.jpg" alt="Mašinska obrada 9">
+      <img src="img/mca10.jpg" alt="Mašinska obrada 10">
+    </div>
+  </section>
+</div>
+
+<div id="reviews">
+  <section class="reviews">
+    <h2>Recenzije</h2>
+    <p>“Odlična firma! Precizna obrada metala i profesionalan pristup.”</p>
+    <p>“Brza i kvalitetna usluga, preporučujem svakome.”</p>
+    <p>“Visok nivo stručnosti i preciznosti u svakom projektu.”</p>
+    <p>“Kvalitet izrade je izvanredan, sve je urađeno na vreme.”</p>
+    <p>“Izuzetna komunikacija i transparentnost tokom celog procesa.”</p>
+    <p>“Profesionalan tim i odlična podrška nakon završetka projekta.”</p>
+    <p>“Ovo je firma kojoj se može verovati za ozbiljne projekte.”</p>
+    <p>“Moderne tehnologije i vrhunska preciznost.”</p>
+    <p>“Ponosni smo što sarađujemo sa njima.”</p>
+    <p>“Sve preporuke za kvalitet i pouzdanost.”</p>
+  </section>
+</div>
+
+<div id="contact">
+  <section>
+    <h2>Kontakt</h2>
+    <p>Adresa: Čačak, Srbija</p>
+    <p>Email: info@mca2017.rs</p>
+    <p>Telefon: +381 XX XXX XXXX</p>
+  </section>
+</div>
 
 <script>
 let currentLang = 'sr';
-const sections = ['about','services','gallery','reviews','contact'];
 
 const translations = {
   sr: {about:"O nama", services:"Usluge", gallery:"Galerija", reviews:"Recenzije", contact:"Kontakt"},
   en: {about:"About Us", services:"Services", gallery:"Gallery", reviews:"Reviews", contact:"Contact"},
   de: {about:"Über uns", services:"Dienstleistungen", gallery:"Galerie", reviews:"Bewertungen", contact:"Kontakt"}
+};
+
+const reviewsData = {
+  sr:[
+    "Odlična firma! Precizna obrada metala i profesionalan pristup.",
+    "Brza i kvalitetna usluga, preporučujem svakome.",
+    "Visok nivo stručnosti i preciznosti u svakom projektu.",
+    "Kvalitet izrade je izvanredan, sve je urađeno na vreme.",
+    "Izuzetna komunikacija i transparentnost tokom celog procesa.",
+    "Profesionalan tim i odlična podrška nakon završetka projekta.",
+    "Ovo je firma kojoj se može verovati za ozbiljne projekte.",
+    "Moderne tehnologije i vrhunska preciznost.",
+    "Ponosni smo što sarađujemo sa njima.",
+    "Sve preporuke za kvalitet i pouzdanost."
+  ],
+  en:[
+    "Excellent company! Precision metal processing and professional approach.",
+    "Fast and high-quality service, highly recommended.",
+    "High level of expertise and precision in every project.",
+    "Outstanding workmanship, everything delivered on time.",
+    "Exceptional communication and transparency throughout the process.",
+    "Professional team and excellent support after project completion.",
+    "A company you can trust for serious projects.",
+    "Modern technologies and top-level precision.",
+    "We are proud to work with them.",
+    "Highly recommended for quality and reliability."
+  ],
+  de:[
+    "Ausgezeichnetes Unternehmen! Präzise Metallbearbeitung und professioneller Ansatz.",
+    "Schneller und qualitativ hochwertiger Service, sehr zu empfehlen.",
+    "Hohe Fachkompetenz und Präzision bei jedem Projekt.",
+    "Hervorragende Verarbeitung, alles pünktlich geliefert.",
+    "Außergewöhnliche Kommunikation und Transparenz während des gesamten Prozesses.",
+    "Professionelles Team und exzellente Unterstützung nach Projektabschluss.",
+    "Ein Unternehmen, dem man bei großen Projekten vertrauen kann.",
+    "Moderne Technologien und höchste Präzision.",
+    "Wir sind stolz, mit ihnen zusammenzuarbeiten.",
+    "Sehr empfehlenswert für Qualität und Zuverlässigkeit."
+  ]
 };
 
 function setLanguage(lang){
@@ -60,71 +150,4 @@ function setLanguage(lang){
   document.querySelector("a[href='#services']").textContent = translations[lang].services;
   document.querySelector("a[href='#gallery']").textContent = translations[lang].gallery;
   document.querySelector("a[href='#reviews']").textContent = translations[lang].reviews;
-  document.querySelector("a[href='#contact']").textContent = translations[lang].contact;
-  sections.forEach(loadSection);
-}
-
-function loadSection(id){
-  if(id==='gallery'){
-    let html = '<section id="gallery"><h2>'+translations[currentLang].gallery+'</h2><div class="gallery-grid">';
-    for(let i=1;i<=10;i++){
-      html += '<img src="img/mca'+i+'.jpg" alt="Mašinska obrada '+i+'">';
-    }
-    html += '</div></section>';
-    document.getElementById('gallery').innerHTML = html;
-  } else if(id==='reviews'){
-    const reviews = {
-      sr:[
-        "Odlična firma! Precizna obrada metala i profesionalan pristup.",
-        "Brza i kvalitetna usluga, preporučujem svakome.",
-        "Visok nivo stručnosti i preciznosti u svakom projektu.",
-        "Kvalitet izrade je izvanredan, sve je urađeno na vreme.",
-        "Izuzetna komunikacija i transparentnost tokom celog procesa.",
-        "Profesionalan tim i odlična podrška nakon završetka projekta.",
-        "Ovo je firma kojoj se može verovati za ozbiljne projekte.",
-        "Moderne tehnologije i vrhunska preciznost.",
-        "Ponosni smo što sarađujemo sa njima.",
-        "Sve preporuke za kvalitet i pouzdanost."
-      ],
-      en:[
-        "Excellent company! Precision metal processing and professional approach.",
-        "Fast and high-quality service, highly recommended.",
-        "High level of expertise and precision in every project.",
-        "Outstanding workmanship, everything delivered on time.",
-        "Exceptional communication and transparency throughout the process.",
-        "Professional team and excellent support after project completion.",
-        "A company you can trust for serious projects.",
-        "Modern technologies and top-level precision.",
-        "We are proud to work with them.",
-        "Highly recommended for quality and reliability."
-      ],
-      de:[
-        "Ausgezeichnetes Unternehmen! Präzise Metallbearbeitung und professioneller Ansatz.",
-        "Schneller und qualitativ hochwertiger Service, sehr zu empfehlen.",
-        "Hohe Fachkompetenz und Präzision bei jedem Projekt.",
-        "Hervorragende Verarbeitung, alles pünktlich geliefert.",
-        "Außergewöhnliche Kommunikation und Transparenz während des gesamten Prozesses.",
-        "Professionelles Team und exzellente Unterstützung nach Projektabschluss.",
-        "Ein Unternehmen, dem man bei großen Projekten vertrauen kann.",
-        "Moderne Technologien und höchste Präzision.",
-        "Wir sind stolz, mit ihnen zusammenzuarbeiten.",
-        "Sehr empfehlenswert für Qualität und Zuverlässigkeit."
-      ]
-    };
-    let html = '<section id="reviews" class="reviews"><h2>'+translations[currentLang].reviews+'</h2>';
-    reviews[currentLang].forEach(r => { html += '<p>“'+r+'”</p>'; });
-    html += '</section>';
-    document.getElementById('reviews').innerHTML = html;
-  } else {
-    fetch('lang/'+currentLang+'/'+id+'.html')
-      .then(res=>res.text())
-      .then(html=>document.getElementById(id).innerHTML=html)
-      .catch(err=>document.getElementById(id).innerHTML="<section><h2>"+translations[currentLang][id]+"</h2><p>Greška učitavanja sekcije.</p></section>");
-  }
-}
-
-sections.forEach(loadSection);
-</script>
-
-</body>
-</html>
+  document.querySelector("a[href='#contact']").textContent = translations[lang
