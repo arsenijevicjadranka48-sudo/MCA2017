@@ -43,6 +43,7 @@
 
 <script>
 let currentLang = 'sr';
+const sections = ['about','services','gallery','contact'];
 
 const translations = {
   sr: {about:"O nama", services:"Usluge", gallery:"Galerija", contact:"Kontakt"},
@@ -50,17 +51,15 @@ const translations = {
   de: {about:"Über uns", services:"Dienstleistungen", gallery:"Galerie", contact:"Kontakt"}
 };
 
-// Funkcija za promjenu jezika
 function setLanguage(lang){
   currentLang = lang;
   document.querySelector("a[href='#about']").textContent = translations[lang].about;
   document.querySelector("a[href='#services']").textContent = translations[lang].services;
   document.querySelector("a[href='#gallery']").textContent = translations[lang].gallery;
   document.querySelector("a[href='#contact']").textContent = translations[lang].contact;
-  ['about','services','gallery','contact'].forEach(loadSection);
+  sections.forEach(loadSection);
 }
 
-// Funkcija za učitavanje sekcija
 function loadSection(id){
   if(id==='gallery'){
     let html = '<section id="gallery"><h2>'+translations[currentLang].gallery+'</h2><div class="gallery-grid">';
@@ -78,7 +77,7 @@ function loadSection(id){
 }
 
 // Učitaj sve sekcije na početku
-['about','services','gallery','contact'].forEach(loadSection);
+sections.forEach(loadSection);
 </script>
 
 </body>
