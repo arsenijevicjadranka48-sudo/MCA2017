@@ -6,27 +6,66 @@
     <title>MCAC 2017 Arsenijević</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; }
-        header { background:#333; color:#fff; padding:20px; text-align:center; display:flex; align-items:center; justify-content:space-between; }
-        #logo { height:50px; }
-        nav a { color:#fff; margin:0 10px; text-decoration:none; }
+        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+        header { background:#333; color:#fff; padding:20px; text-align:center; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+        #logo { height:60px; }
+        nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
         nav a:hover { text-decoration:underline; }
         section { padding:40px 20px; text-align:center; max-width:900px; margin:auto; }
-        .gallery-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
-        .gallery-grid img { width:200px; height:auto; border:2px solid #ccc; border-radius:8px; }
+        .gallery-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
+        .gallery-grid img { width:200px; height:auto; border:2px solid #ccc; border-radius:8px; transition:transform 0.2s; }
+        .gallery-grid img:hover { transform:scale(1.05); }
         .language-switch { margin-top:10px; }
-        .language-switch button { margin:0 5px; padding:5px 10px; cursor:pointer; }
+        .language-switch button { margin:0 5px; padding:5px 12px; border:none; border-radius:5px; background:#555; color:#fff; cursor:pointer; }
+        .language-switch button:hover { background:#777; }
     </style>
 </head>
 <body>
     <header>
         <img src="mca.png" alt="Logo" id="logo">
         <nav>
-            <a href="#about" onclick="loadSection('about')">O Nama</a>
+            <a href="#about" onclick="loadSection('about')">O nama</a>
             <a href="#services" onclick="loadSection('services')">Usluge</a>
             <a href="#gallery" onclick="loadSection('gallery')">Galerija</a>
             <a href="#contact" onclick="loadSection('contact')">Kontakt</a>
         </nav>
         <div class="language-switch">
             <button onclick="setLanguage('sr')">SR</button>
-            <button onclick=
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('de')">DE</button>
+        </div>
+    </header>
+
+    <div id="about"></div>
+    <div id="services"></div>
+    <div id="gallery"></div>
+    <div id="contact"></div>
+
+    <script>
+        let currentLang = 'sr';
+
+        const setLanguage = (lang) => {
+            currentLang = lang;
+            ['about','services','gallery','contact'].forEach(loadSection);
+        };
+
+        const loadSection = (id) => {
+            if(id === 'gallery') {
+                let html = '<section id="gallery"><h2>Galerija</h2><div class="gallery-grid">';
+                for(let i=1;i<=10;i++){
+                    html += `<img src="mca${i}.jpg" alt="Mašinska obrada ${i}">`;
+                }
+                html += '</div></section>';
+                document.getElementById('gallery').innerHTML = html;
+            } else {
+                fetch(`lang/${currentLang}/${id}.html`)
+                    .then(res => res.text())
+                    .then(html => document.getElementById(id).innerHTML = html)
+                    .catch(err => console.error('Greška učitavanja sekcije:', err));
+            }
+        };
+
+        ['about','services','gallery','contact'].forEach(loadSection);
+    </script>
+</body>
+</html>
