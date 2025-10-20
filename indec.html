@@ -11,32 +11,45 @@
     <header>
         <h1>MCA Mašinska Obrada</h1>
         <nav>
-            <a href="#about">O Nama</a>
-            <a href="#services">Usluge</a>
-            <a href="#gallery">Galerija</a>
-            <a href="#contact">Kontakt</a>
+            <a href="#about" onclick="loadSection('about')">O Nama</a>
+            <a href="#services" onclick="loadSection('services')">Usluge</a>
+            <a href="#gallery" onclick="loadSection('gallery')">Galerija</a>
+            <a href="#contact" onclick="loadSection('contact')">Kontakt</a>
         </nav>
+
+        <!-- Dugmad za jezik -->
+        <div class="language-switch">
+            <button onclick="setLanguage('sr')">SR</button>
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('de')">DE</button>
+        </div>
     </header>
 
-    <!-- Sekcije iz fajlova -->
+    <!-- Sekcije -->
     <div id="about"></div>
     <div id="services"></div>
     <div id="gallery"></div>
     <div id="contact"></div>
 
-    <!-- JS za učitavanje sekcija -->
     <script>
-        const loadSection = (id, file) => {
+        let currentLang = 'sr'; // default srpski
+
+        const setLanguage = (lang) => {
+            currentLang = lang;
+            // Ponovo učitaj sve sekcije kada se promeni jezik
+            ['about', 'services', 'gallery', 'contact'].forEach(loadSection);
+        };
+
+        const loadSection = (id) => {
+            const file = `lang/${currentLang}/${id}.html`;
             fetch(file)
                 .then(response => response.text())
                 .then(html => document.getElementById(id).innerHTML = html)
                 .catch(err => console.error('Greška učitavanja sekcije:', err));
         };
 
-        loadSection('about', 'about.html');
-        loadSection('services', 'services.html');
-        loadSection('gallery', 'gallery.html');
-        loadSection('contact', 'contact.html');
+        // učitaj sve sekcije na početku
+        ['about', 'services', 'gallery', 'contact'].forEach(loadSection);
     </script>
 </body>
 </html>
