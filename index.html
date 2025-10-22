@@ -25,11 +25,11 @@
 <header>
   <img src="img/mca.png" alt="Logo" id="logo">
   <nav>
-    <a href="#about">O nama</a>
-    <a href="#services">Usluge</a>
-    <a href="#gallery">Galerija</a>
-    <a href="#reviews">Recenzije</a>
-    <a href="#contact">Kontakt</a>
+    <a href="#about-sr" onclick="setLanguage('sr')">O nama</a>
+    <a href="#services-sr" onclick="setLanguage('sr')">Usluge</a>
+    <a href="#gallery-sr" onclick="setLanguage('sr')">Galerija</a>
+    <a href="#reviews-sr" onclick="setLanguage('sr')">Recenzije</a>
+    <a href="#contact-sr" onclick="setLanguage('sr')">Kontakt</a>
   </nav>
   <div class="language-switch">
     <button onclick="setLanguage('sr')">SR</button>
@@ -38,61 +38,119 @@
   </div>
 </header>
 
-<div id="about">
-  <section>
-    <h2>O nama</h2>
-    <p>MCA 2017 Arsenijević je renomovana firma iz Čačka specijalizovana za preciznu obradu metala. Naš tim ima više od deset godina iskustva u industriji i posvećen je kvalitetu i inovacijama.</p>
-    <p>Koristimo savremene CNC mašine, laserske sisteme za sečenje i održavanje opreme kako bismo zadovoljili sve potrebe naših klijenata. Naša misija je da pružimo profesionalne i pouzdane usluge u obradi metala, od standardnih do kompleksnih projekata.</p>
-  </section>
-</div>
+<!-- SRPSKI -->
+<section id="about-sr">
+  <h2>O nama</h2>
+  <p>MCA 2017 Arsenijević je renomovana firma iz Čačka specijalizovana za preciznu obradu metala. Naš tim ima više od deset godina iskustva u industriji i posvećen je kvalitetu i inovacijama.</p>
+  <p>Koristimo savremene CNC mašine, laserske sisteme za sečenje i održavanje opreme kako bismo zadovoljili sve potrebe naših klijenata. Naša misija je da pružimo profesionalne i pouzdane usluge u obradi metala, od standardnih do kompleksnih projekata.</p>
+</section>
 
-<div id="services">
-  <section>
-    <h2>Usluge</h2>
-    <p>Pružamo širok spektar usluga u obradi metala, uključujući lasersko sečenje, CNC obradu, savijanje i zavarivanje. Naš tim se stalno usavršava kako bi garantovao kvalitet i preciznost u svim projektima.</p>
-  </section>
-</div>
+<section id="services-sr">
+  <h2>Usluge</h2>
+  <p>Pružamo širok spektar usluga u obradi metala, uključujući lasersko sečenje, CNC obradu, savijanje i zavarivanje. Naš tim se stalno usavršava kako bi garantovao kvalitet i preciznost u svim projektima.</p>
+</section>
 
-<div id="gallery">
-  <section>
-    <h2>Galerija</h2>
-    <div class="gallery-grid">
-      <img src="img/1.jpg" alt="Galerija 1">
-      <img src="img/2.jpg" alt="Galerija 2">
-      <img src="img/3.jpg" alt="Galerija 3">
-    </div>
-  </section>
-</div>
+<section id="gallery-sr">
+  <h2>Galerija</h2>
+  <div class="gallery-grid">
+    <img src="img/1.jpg" alt="Galerija 1">
+    <img src="img/2.jpg" alt="Galerija 2">
+    <img src="img/3.jpg" alt="Galerija 3">
+  </div>
+</section>
 
-<div id="reviews">
-  <section>
-    <h2>Recenzije</h2>
-    <div class="reviews">
-      <p>"Odlična usluga i profesionalan tim!" – Klijent A</p>
-      <p>"Preporučujem svima koji traže kvalitetnu obradu metala." – Klijent B</p>
-    </div>
-  </section>
-</div>
+<section id="reviews-sr">
+  <h2>Recenzije</h2>
+  <div class="reviews">
+    <p>"Odlična usluga i profesionalan tim!" – Klijent A</p>
+    <p>"Preporučujem svima koji traže kvalitetnu obradu metala." – Klijent B</p>
+  </div>
+</section>
 
-<div id="contact">
-  <section>
-    <h2>Kontakt</h2>
-    <p>Email: info@mca2017.rs</p>
-    <p>Telefon: +381 63 123 4567</p>
-    <p>Adresa: Čačak, Srbija</p>
-  </section>
-</div>
+<section id="contact-sr">
+  <h2>Kontakt</h2>
+  <p>Email: info@mca2017.rs | Telefon: +381 63 123 4567 | Adresa: Čačak, Srbija</p>
+</section>
+
+<!-- ENGLESKI -->
+<section id="about-en" style="display:none;">
+  <h2>About Us</h2>
+  <p>MCA 2017 Arsenijević is a renowned company from Čačak specializing in precision metalworking. Our team has over ten years of experience in the industry and is committed to quality and innovation.</p>
+  <p>We use modern CNC machines, laser cutting systems, and equipment maintenance to meet all our clients' needs. Our mission is to provide professional and reliable metalworking services, from standard to complex projects.</p>
+</section>
+
+<section id="services-en" style="display:none;">
+  <h2>Services</h2>
+  <p>We provide a wide range of metalworking services, including laser cutting, CNC machining, bending, and welding. Our team continuously improves to ensure quality and precision in all projects.</p>
+</section>
+
+<section id="gallery-en" style="display:none;">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="img/1.jpg" alt="Gallery 1">
+    <img src="img/2.jpg" alt="Gallery 2">
+    <img src="img/3.jpg" alt="Gallery 3">
+  </div>
+</section>
+
+<section id="reviews-en" style="display:none;">
+  <h2>Reviews</h2>
+  <div class="reviews">
+    <p>"Excellent service and professional team!" – Client A</p>
+    <p>"I recommend them to everyone looking for quality metalwork." – Client B</p>
+  </div>
+</section>
+
+<section id="contact-en" style="display:none;">
+  <h2>Contact</h2>
+  <p>Email: info@mca2017.rs | Phone: +381 63 123 4567 | Address: Čačak, Serbia</p>
+</section>
+
+<!-- NEMAČKI -->
+<section id="about-de" style="display:none;">
+  <h2>Über uns</h2>
+  <p>MCA 2017 Arsenijević ist ein renommiertes Unternehmen aus Čačak, das sich auf präzise Metallbearbeitung spezialisiert hat. Unser Team verfügt über mehr als zehn Jahre Erfahrung in der Branche und setzt sich für Qualität und Innovation ein.</p>
+  <p>Wir verwenden moderne CNC-Maschinen, Laserschneidsysteme und Wartungsausrüstung, um alle Bedürfnisse unserer Kunden zu erfüllen. Unsere Mission ist es, professionelle und zuverlässige Metallbearbeitungsdienste von Standard- bis zu komplexen Projekten anzubieten.</p>
+</section>
+
+<section id="services-de" style="display:none;">
+  <h2>Dienstleistungen</h2>
+  <p>Wir bieten ein breites Spektrum an Metallbearbeitungsdiensten, einschließlich Laserschneiden, CNC-Bearbeitung, Biegen und Schweißen. Unser Team bildet sich kontinuierlich weiter, um Qualität und Präzision in allen Projekten zu gewährleisten.</p>
+</section>
+
+<section id="gallery-de" style="display:none;">
+  <h2>Galerie</h2>
+  <div class="gallery-grid">
+    <img src="img/1.jpg" alt="Galerie 1">
+    <img src="img/2.jpg" alt="Galerie 2">
+    <img src="img/3.jpg" alt="Galerie 3">
+  </div>
+</section>
+
+<section id="reviews-de" style="display:none;">
+  <h2>Bewertungen</h2>
+  <div class="reviews">
+    <p>"Ausgezeichneter Service und professionelles Team!" – Kunde A</p>
+    <p>"Ich empfehle sie allen, die hochwertige Metallbearbeitung suchen." – Kunde B</p>
+  </div>
+</section>
+
+<section id="contact-de" style="display:none;">
+  <h2>Kontakt</h2>
+  <p>Email: info@mca2017.rs | Telefon: +381 63 123 4567 | Adresse: Čačak, Serbien</p>
+</section>
 
 <script>
-  function setLanguage(lang) {
-    if(lang === 'sr') {
-      alert('Promijenili ste jezik na Srpski.');
-    } else if(lang === 'en') {
-      alert('Language switched to English.');
-    } else if(lang === 'de') {
-      alert('Sprache auf Deutsch umgestellt.');
-    }
-  }
+function setLanguage(lang) {
+  const languages = ['sr', 'en', 'de'];
+  
+  languages.forEach(l => {
+    const sections = document.querySelectorAll(`[id$='-${l}']`);
+    sections.forEach(sec => {
+      sec.style.display = (l === lang) ? 'block' : 'none';
+    });
+  });
+}
 </script>
 
 </body>
