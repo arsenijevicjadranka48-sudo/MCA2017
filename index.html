@@ -6,7 +6,7 @@
 <title>MCA 2017 Arsenijević</title>
 <link rel="stylesheet" href="css/services.css">
 <style>
-  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; scroll-behavior:smooth; }
   header { background:#333; color:#fff; padding:20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; }
   #logo { height:60px; }
   nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
@@ -19,6 +19,8 @@
   .gallery-grid img { width:200px; height:auto; border:2px solid #ccc; border-radius:8px; transition:transform 0.2s; }
   .gallery-grid img:hover { transform:scale(1.05); }
   .reviews p { margin:10px 0; font-style:italic; }
+  footer { background:#333; color:#fff; text-align:center; padding:20px; }
+  iframe { width:100%; height:300px; border:0; border-radius:8px; margin-top:15px; }
 </style>
 </head>
 <body>
@@ -42,122 +44,146 @@
 <!-- SRPSKI -->
 <section id="about-sr">
   <h2>O nama</h2>
-  <p>MCA 2017 Arsenijević je renomovana firma iz Čačka specijalizovana za preciznu obradu metala. Naš tim ima više od deset godina iskustva u industriji i posvećen je kvalitetu i inovacijama.</p>
-  <p>Koristimo savremene CNC mašine, laserske sisteme za sečenje i održavanje opreme kako bismo zadovoljili sve potrebe naših klijenata. Naša misija je da pružimo profesionalne i pouzdane usluge u obradi metala, od standardnih do kompleksnih projekata.</p>
+  <p>MCA 2017 Arsenijević je renomovana firma iz Čačka specijalizovana za preciznu obradu metala. Naš tim ima više od deset godina iskustva u industriji i posvećen je kvalitetu, tačnosti i inovacijama. Kombinujemo savremenu tehnologiju sa tradicionalnim zanatstvom kako bismo ostvarili vrhunske rezultate u svim projektima koje preuzimamo.</p>
+  <p>Naša proizvodnja obuhvata CNC glodanje, struganje, brušenje, erodiranje i lasersko sečenje metala. Svaki korak procesa kontroliše se pažljivo – od dizajna i planiranja do finalne obrade i isporuke. Zahvaljujući visokom nivou stručnosti i kvalitetnim materijalima, uspešno sarađujemo sa kompanijama iz automobilske, mašinske i energetske industrije.</p>
+  <p>U MCA 2017 Arsenijević verujemo da je poverenje osnova svakog poslovnog odnosa. Naši klijenti nas cene zbog tačnosti, transparentnosti i sposobnosti da pronađemo rešenja i za najzahtevnije projekte. Naša misija je da stalno unapređujemo procese i postavljamo nove standarde u oblasti obrade metala.</p>
 </section>
 
 <section id="services-sr">
   <h2>Usluge</h2>
   <ul>
-    <li><strong>CNC obrada metala:</strong> Precizna obrada po specifikacijama klijenata, uključujući glodanje, bušenje i tokarenje.</li>
-    <li><strong>Lasersko sečenje:</strong> Visokoprecizno sečenje metala svih debljina, sa minimalnim otpadom materijala.</li>
-    <li><strong>Održavanje mašina:</strong> Servis i preventivno održavanje industrijskih mašina kako bi rad bio siguran i pouzdan.</li>
-    <li><strong>Projekat po meri:</strong> Razvijamo rešenja prilagođena vašim potrebama, od dizajna do finalne obrade.</li>
-    <li><strong>Glodanje:</strong> Precizno glodanje metala za sve vrste delova i komponenti.</li>
-    <li><strong>Struganje:</strong> Obrada cilindričnih i konusnih površina visoke tačnosti.</li>
-    <li><strong>Ravno brušenje:</strong> Postizanje ravnih i glatkih površina sa minimalnim tolerancijama.</li>
-    <li><strong>Obimno brušenje:</strong> Obrada većih površina za industrijske komponente.</li>
-    <li><strong>Erodiranje žica:</strong> Visokoprecizna obrada tvrdih materijala pomoću erozije žicom.</li>
-    <li><strong>Erodiranje elektroda:</strong> Precizno oblikovanje i finiširanje pomoću elektroda.</li>
-    <li><strong>Lasersko sečenje lima:</strong> Brzo i precizno sečenje limova različitih debljina.</li>
+    <li><strong>CNC obrada metala</strong> – Precizna obrada po specifikacijama klijenata.</li>
+    <li><strong>Lasersko sečenje</strong> – Visokoprecizno sečenje metala svih debljina.</li>
+    <li><strong>Održavanje mašina</strong> – Servis i preventivno održavanje industrijskih mašina.</li>
   </ul>
+</section>
+
+<section id="gallery-sr">
+  <h2>Galerija</h2>
+  <div class="gallery-grid">
+    <img src="img/mca1.jpg" alt="MCA 1">
+    <img src="img/mca2.jpg" alt="MCA 2">
+    <img src="img/mca3.jpg" alt="MCA 3">
+    <img src="img/mca4.jpg" alt="MCA 4">
+    <img src="img/mca5.jpg" alt="MCA 5">
+    <img src="img/mca6.jpg" alt="MCA 6">
+    <img src="img/mca7.jpg" alt="MCA 7">
+    <img src="img/mca8.jpg" alt="MCA 8">
+    <img src="img/mca9.jpg" alt="MCA 9">
+    <img src="img/mca10.jpg" alt="MCA 10">
+  </div>
 </section>
 
 <section id="reviews-sr">
   <h2>Recenzije</h2>
   <div class="reviews">
     <p>“Odlična firma! Precizna obrada metala i profesionalan pristup.” – Klijent A</p>
-    <p>“Brza i kvalitetna usluga, preporučujem svakome.” – Klijent B</p>
-    <p>“Visok nivo stručnosti i preciznosti u svakom projektu.” – Klijent C</p>
-    <p>“Kvalitet izrade je izvanredan, sve je urađeno na vreme.” – Klijent D</p>
-    <p>“Izuzetna komunikacija i transparentnost tokom celog procesa.” – Klijent E</p>
-    <p>“Profesionalan tim i odlična podrška nakon završetka projekta.” – Klijent F</p>
-    <p>“Ovo je firma kojoj se može verovati za ozbiljne projekte.” – Klijent G</p>
-    <p>“Moderne tehnologije i vrhunska preciznost.” – Klijent H</p>
-    <p>“Ponosni smo što sarađujemo sa njima.” – Klijent I</p>
-    <p>“Sve preporuke za kvalitet i pouzdanost.” – Klijent J</p>
   </div>
+</section>
+
+<section id="contact-sr">
+  <h2>Kontakt</h2>
+  <p><strong>Adresa:</strong> Čačak, Srbija</p>
+  <p><strong>Telefon:</strong> +381 63 123 4567</p>
+  <p><strong>Email:</strong> info@mca2017.rs</p>
+  <iframe src="https://www.google.com/maps?q=Čačak,+Srbija&output=embed"></iframe>
 </section>
 
 <!-- ENGLESKI -->
 <section id="about-en" style="display:none;">
   <h2>About Us</h2>
-  <p>MCA 2017 Arsenijević is a renowned company from Čačak specializing in precision metalworking. Our team has over ten years of experience in the industry and is committed to quality and innovation.</p>
-  <p>We use modern CNC machines, laser cutting systems, and equipment maintenance to meet all our clients' needs. Our mission is to provide professional and reliable metalworking services, from standard to complex projects.</p>
+  <p>MCA 2017 Arsenijević is a reputable company from Čačak, Serbia, specializing in precision metalworking. With over a decade of experience, our team combines expertise, technology, and craftsmanship to deliver exceptional results across various industries.</p>
+  <p>We offer CNC milling, turning, grinding, wire and electrode EDM, and laser cutting services. Every step of production is carefully monitored—from design and planning to the final inspection and delivery. Our goal is to ensure maximum precision, efficiency, and customer satisfaction in all aspects of our work.</p>
+  <p>We take pride in building long-term relationships based on trust and quality. Clients choose MCA 2017 Arsenijević for our reliability, transparency, and ability to deliver tailored solutions for complex metalworking projects. Our mission is continuous improvement and setting new standards in the machining industry.</p>
 </section>
 
 <section id="services-en" style="display:none;">
   <h2>Services</h2>
   <ul>
-    <li><strong>CNC Metal Machining:</strong> Precision machining according to client specifications, including milling, drilling, and turning.</li>
-    <li><strong>Laser Cutting:</strong> High-precision cutting of metals of all thicknesses with minimal material waste.</li>
-    <li><strong>Machine Maintenance:</strong> Service and preventive maintenance of industrial machines to ensure safe and reliable operation.</li>
-    <li><strong>Custom Projects:</strong> We develop tailored solutions for your needs, from design to final machining.</li>
-    <li><strong>Milling:</strong> Precision milling of metal components of all types and sizes.</li>
-    <li><strong>Turning:</strong> Machining of cylindrical and conical surfaces with high accuracy.</li>
-    <li><strong>Surface Grinding:</strong> Achieving flat and smooth surfaces with minimal tolerances.</li>
-    <li><strong>Cylindrical Grinding:</strong> Grinding of large surfaces for industrial components.</li>
-    <li><strong>Wire EDM:</strong> High-precision machining of hard materials using wire erosion technology.</li>
-    <li><strong>Electrode EDM:</strong> Precision shaping and finishing using electrode-based erosion.</li>
-    <li><strong>Sheet Laser Cutting:</strong> Fast and precise cutting of sheet metal of various thicknesses.</li>
+    <li><strong>CNC Machining</strong> – Precision machining according to client specifications.</li>
+    <li><strong>Laser Cutting</strong> – High-precision cutting of metals.</li>
+    <li><strong>Machine Maintenance</strong> – Service and preventive maintenance.</li>
   </ul>
+</section>
+
+<section id="gallery-en" style="display:none;">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="img/mca1.jpg" alt="MCA 1">
+    <img src="img/mca2.jpg" alt="MCA 2">
+    <img src="img/mca3.jpg" alt="MCA 3">
+    <img src="img/mca4.jpg" alt="MCA 4">
+    <img src="img/mca5.jpg" alt="MCA 5">
+    <img src="img/mca6.jpg" alt="MCA 6">
+    <img src="img/mca7.jpg" alt="MCA 7">
+    <img src="img/mca8.jpg" alt="MCA 8">
+    <img src="img/mca9.jpg" alt="MCA 9">
+    <img src="img/mca10.jpg" alt="MCA 10">
+  </div>
 </section>
 
 <section id="reviews-en" style="display:none;">
   <h2>Reviews</h2>
-  <div class="reviews">
-    <p>"Excellent company! Precise metalworking and professional approach." – Client A</p>
-    <p>"Fast and high-quality service, highly recommended." – Client B</p>
-    <p>"High level of expertise and precision in every project." – Client C</p>
-    <p>"Outstanding craftsmanship, everything delivered on time." – Client D</p>
-    <p>"Exceptional communication and transparency throughout the process." – Client E</p>
-    <p>"Professional team and excellent support after project completion." – Client F</p>
-    <p>"This is a company you can trust for serious projects." – Client G</p>
-    <p>"Modern technologies and top-notch precision." – Client H</p>
-    <p>"Proud to collaborate with them." – Client I</p>
-    <p>"Highly recommended for quality and reliability." – Client J</p>
-  </div>
+  <p>"Excellent company! Precision and professionalism." – Client A</p>
+</section>
+
+<section id="contact-en" style="display:none;">
+  <h2>Contact</h2>
+  <p><strong>Address:</strong> Čačak, Serbia</p>
+  <p><strong>Phone:</strong> +381 63 123 4567</p>
+  <p><strong>Email:</strong> info@mca2017.rs</p>
+  <iframe src="https://www.google.com/maps?q=Čačak,+Srbija&output=embed"></iframe>
 </section>
 
 <!-- NEMAČKI -->
 <section id="about-de" style="display:none;">
   <h2>Über uns</h2>
-  <p>MCA 2017 Arsenijević ist ein renommiertes Unternehmen aus Čačak, das sich auf präzise Metallbearbeitung spezialisiert hat. Unser Team verfügt über mehr als zehn Jahre Erfahrung in der Branche und setzt sich für Qualität und Innovation ein.</p>
-  <p>Wir verwenden moderne CNC-Maschinen, Laserschneidsysteme und Wartungsausrüstung, um alle Bedürfnisse unserer Kunden zu erfüllen. Unsere Mission ist es, professionelle und zuverlässige Metallbearbeitungsdienste von Standard- bis zu komplexen Projekten anzubieten.</p>
+  <p>MCA 2017 Arsenijević ist ein angesehenes Unternehmen aus Čačak, Serbien, das sich auf präzise Metallbearbeitung spezialisiert hat. Mit über zehn Jahren Erfahrung vereint unser Team Fachwissen, Technologie und Handwerkskunst, um herausragende Ergebnisse zu erzielen.</p>
+  <p>Unser Leistungsangebot umfasst CNC-Fräsen, Drehen, Schleifen, Drahterodieren, Elektroden-EDM und Laserschneiden. Jeder Produktionsschritt wird sorgfältig überwacht – von der Planung und Konstruktion bis zur Endkontrolle. Unser Ziel ist maximale Präzision und Kundenzufriedenheit.</p>
+  <p>Wir legen großen Wert auf langfristige Partnerschaften, die auf Vertrauen, Qualität und Zuverlässigkeit basieren. MCA 2017 Arsenijević steht für Transparenz, Professionalität und die Fähigkeit, maßgeschneiderte Lösungen auch für anspruchsvolle Projekte zu liefern.</p>
 </section>
 
 <section id="services-de" style="display:none;">
   <h2>Dienstleistungen</h2>
   <ul>
-    <li><strong>CNC Metallbearbeitung:</strong> Präzise Bearbeitung nach Kundenspezifikationen, einschließlich Fräsen, Bohren und Drehen.</li>
-    <li><strong>Laserschneiden:</strong> Hochpräzises Schneiden von Metallen aller Stärken mit minimalem Materialverlust.</li>
-    <li><strong>Maschinenwartung:</strong> Service und präventive Wartung von Industriemaschinen für sicheren und zuverlässigen Betrieb.</li>
-    <li><strong>Maßgeschneiderte Projekte:</strong> Wir entwickeln Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind, vom Design bis zur Endbearbeitung.</li>
-    <li><strong>Fräsen:</strong> Präzises Fräsen von Metallkomponenten aller Arten und Größen.</li>
-    <li><strong>Drehen:</strong> Bearbeitung von zylindrischen und konischen Oberflächen mit hoher Genauigkeit.</li>
-    <li><strong>Flachschleifen:</strong> Erreichen von flachen und glatten Oberflächen mit minimalen Toleranzen.</li>
-    <li><strong>Zylinderschleifen:</strong> Bearbeitung größerer Flächen für industrielle Komponenten.</li>
-    <li><strong>Drahterodieren:</strong> Hochpräzise Bearbeitung harter Materialien mittels Drahterosion.</li>
-    <li><strong>Elektroden-EDM:</strong> Präzises Formen und Finishen mittels Elektrodenbearbeitung.</li>
-    <li><strong>Blechlaserschneiden:</strong> Schnelles und präzises Schneiden von Blechen unterschiedlicher Stärken.</li>
+    <li><strong>CNC-Bearbeitung</strong> – Präzise Bearbeitung nach Kundenspezifikationen.</li>
+    <li><strong>Laserschneiden</strong> – Hochpräzises Schneiden von Metallen.</li>
+    <li><strong>Maschinenwartung</strong> – Service und präventive Wartung.</li>
   </ul>
+</section>
+
+<section id="gallery-de" style="display:none;">
+  <h2>Galerie</h2>
+  <div class="gallery-grid">
+    <img src="img/mca1.jpg" alt="MCA 1">
+    <img src="img/mca2.jpg" alt="MCA 2">
+    <img src="img/mca3.jpg" alt="MCA 3">
+    <img src="img/mca4.jpg" alt="MCA 4">
+    <img src="img/mca5.jpg" alt="MCA 5">
+    <img src="img/mca6.jpg" alt="MCA 6">
+    <img src="img/mca7.jpg" alt="MCA 7">
+    <img src="img/mca8.jpg" alt="MCA 8">
+    <img src="img/mca9.jpg" alt="MCA 9">
+    <img src="img/mca10.jpg" alt="MCA 10">
+  </div>
 </section>
 
 <section id="reviews-de" style="display:none;">
   <h2>Bewertungen</h2>
-  <div class="reviews">
-    <p>"Ausgezeichnetes Unternehmen! Präzise Metallbearbeitung und professioneller Ansatz." – Kunde A</p>
-    <p>"Schneller und hochwertiger Service, sehr zu empfehlen." – Kunde B</p>
-    <p>"Hohe Fachkompetenz und Präzision in jedem Projekt." – Kunde C</p>
-    <p>"Hervorragende Handwerkskunst, alles termingerecht geliefert." – Kunde D</p>
-    <p>"Außergewöhnliche Kommunikation und Transparenz während des gesamten Prozesses." – Kunde E</p>
-    <p>"Professionelles Team und exzellenter Support nach Projektabschluss." – Kunde F</p>
-    <p>"Dies ist ein Unternehmen, dem man bei ernsthaften Projekten vertrauen kann." – Kunde G</p>
-    <p>"Moderne Technologien und höchste Präzision." – Kunde H</p>
-    <p>"Wir sind stolz auf die Zusammenarbeit mit ihnen." – Kunde I</p>
-    <p>"Sehr zu empfehlen für Qualität und Zuverlässigkeit." – Kunde J</p>
-  </div>
+  <p>"Ausgezeichnetes Unternehmen! Präzision und Professionalität." – Kunde A</p>
 </section>
+
+<section id="contact-de" style="display:none;">
+  <h2>Kontakt</h2>
+  <p><strong>Adresse:</strong> Čačak, Serbien</p>
+  <p><strong>Telefon:</strong> +381 63 123 4567</p>
+  <p><strong>Email:</strong> info@mca2017.rs</p>
+  <iframe src="https://www.google.com/maps?q=Čačak,+Srbija&output=embed"></iframe>
+</section>
+
+<footer>
+  © 2025 MCA 2017 Arsenijević – Sva prava zadržana
+</footer>
 
 <script>
 function setLanguage(lang) {
