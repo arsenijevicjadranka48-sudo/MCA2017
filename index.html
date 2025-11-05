@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arduino Projekti i Komponente</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automatika Pro - Arduino Projekti i Komponente</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-    header { background: #005baa; color: white; padding: 20px; text-align: center; }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #005baa; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px; text-align: center; }
-    img { max-width: 100%; border-radius: 10px; }
-    footer { background: #222; color: white; text-align: center; padding: 15px; }
+    body {font-family: Arial, sans-serif; margin: 0; background: #f7f9fc; color: #333;}
+    header {background: #0066cc; color: white; padding: 15px 0; text-align: center; position: sticky; top: 0;}
+    nav a {color: white; margin: 0 15px; text-decoration: none; font-weight: bold;}
+    section {padding: 50px 20px; max-width: 1000px; margin: auto;}
+    h2 {color: #0066cc;}
+    .back-btn {display: inline-block; margin-top: 20px; background: #0066cc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;}
+    .product {border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 15px 0; background: white;}
+    .product img {width: 100%; border-radius: 10px;}
+    .review {background: #e9f2ff; padding: 20px; border-radius: 10px; margin: 10px 0;}
+    footer {background: #003366; color: white; text-align: center; padding: 15px; margin-top: 50px;}
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Arduino Projekti i Komponente</h1>
-    <p>Profesionalno projektovanje i prodaja Arduino opreme</p>
+    <h1>Automatika Pro</h1>
+    <nav>
+      <a href="#pocetna">Početna</a>
+      <a href="#onama">O nama</a>
+      <a href="#usluge">Usluge</a>
+      <a href="#projekti">Projekti</a>
+      <a href="#prodaja">Prodaja dijelova</a>
+      <a href="#recenzije">Recenzije</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
-  <section>
+  <section id="pocetna">
+    <h2>Dobrodošli u Automatika Pro</h2>
+    <p>Pružamo profesionalne usluge Arduino programiranja, automatizacije i projektovanja industrijskih i kućnih sistema.</p>
+    <img src="https://cdn.pixabay.com/photo/2016/06/07/18/27/arduino-1442872_1280.jpg" width="100%" alt="Arduino">
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
+  </section>
+
+  <section id="onama">
     <h2>O nama</h2>
-    <p>Specijalizovani smo za projektovanje automatizovanih sistema zasnovanih na Arduino tehnologiji. Nudimo izradu prilagođenih projekata, od ideje do realizacije, kao i prodaju Arduino komponenti za entuzijaste i profesionalce.</p>
+    <p>Naš tim se bavi projektovanjem automatike, razvojem Arduino sistema, pametnih uređaja i integracijom senzora.  
+    Imamo višegodišnje iskustvo u industriji i cilj nam je donijeti moderne tehnologije svakome ko želi unaprijediti svoje okruženje.</p>
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
-  <section>
-    <h2>Naše usluge</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Uno_-_R3.jpg" alt="Arduino Uno">
-        <h3>Arduino programiranje</h3>
-        <p>Izrada prilagođenih programa za mikrokontrolere, automatizaciju, robotiku, pametne kuće i druge primjene.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn.sparkfun.com//assets/parts/1/2/0/9/5/13975-Arduino_Mega_2560_-_R3-01.jpg" alt="Arduino Mega">
-        <h3>Projektovanje sistema</h3>
-        <p>Kompletno projektovanje elektronskih sistema, PCB dizajn, integracija senzora i aktuatora.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn.shopify.com/s/files/1/0267/1304/7927/products/sensors_1200x1200.jpg?v=1642558701" alt="Senzori i moduli">
-        <h3>Prodaja komponenti</h3>
-        <p>Arduino pločice, senzori, releji, motori, moduli i ostali elektronski dijelovi dostupni po povoljnim cijenama.</p>
-      </div>
-    </div>
+  <section id="usluge">
+    <h2>Usluge</h2>
+    <ul>
+      <li>Arduino programiranje i razvoj</li>
+      <li>Izrada prototipa i testiranje sistema</li>
+      <li>Automatizacija mašina i kućnih uređaja</li>
+      <li>Integracija senzora, motora i aktuatora</li>
+    </ul>
+    <img src="https://cdn.pixabay.com/photo/2018/03/30/13/14/technology-3270462_1280.jpg" width="100%" alt="Automatika">
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
-  <section>
-    <h2>Primjeri projekata</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://www.electronicshub.org/wp-content/uploads/2018/04/Smart-Irrigation-System-using-Arduino-Image-1.jpg" alt="Sistem za navodnjavanje">
-        <h3>Sistem za navodnjavanje</h3>
-        <p>Automatski sistem za navodnjavanje koji koristi senzore vlage i upravlja pumpom preko Arduino kontrolera.</p>
-      </div>
-      <div class="card">
-        <img src="https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/5/4/5/Motion_Detector.jpg" alt="Detekcija pokreta">
-        <h3>Detekcija pokreta</h3>
-        <p>Sistem za sigurnost koji aktivira alarm ili svjetlo prilikom otkrivanja pokreta pomoću PIR senzora.</p>
-      </div>
-      <div class="card">
-        <img src="https://projecthub.arduino.cc/img/19b5dbec-09a4-4a07-a7b3-218a2b8700b2.jpg" alt="Pametna rasvjeta">
-        <h3>Pametna rasvjeta</h3>
-        <p>Automatizovana LED rasvjeta koja reaguje na svjetlosne uslove ili prisustvo osoba u prostoriji.</p>
-      </div>
+  <section id="projekti">
+    <h2>Projekti</h2>
+    <p>Primjeri naših projekata uključuju sustave za pametno navodnjavanje, regulaciju temperature i automatske pokretače vrata.</p>
+    <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/sensor-1287782_1280.jpg" width="100%" alt="Projekt senzor">
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
+  </section>
+
+  <section id="prodaja">
+    <h2>Prodaja Arduino dijelova</h2>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/sensor-1287782_1280.jpg" alt="Senzor temperature">
+      <h3>Senzor temperature DHT11</h3>
+      <p>Cijena: 8 KM</p>
     </div>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/02/19/11/53/motor-1209656_1280.jpg" alt="DC motor">
+      <h3>DC motor 12V</h3>
+      <p>Cijena: 15 KM</p>
+    </div>
+    <p>🧩 Možeš ručno dodati nove dijelove — samo kopiraj HTML blok <code>&lt;div class="product"&gt;...&lt;/div&gt;</code> i izmijeni naziv, sliku i cijenu.</p>
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
+  </section>
+
+  <section id="recenzije">
+    <h2>Recenzije korisnika</h2>
+    <div class="review">
+      <p>⭐⭐⭐⭐⭐ "Brza izrada i odlična komunikacija. Arduino sistem radi savršeno!"</p>
+    </div>
+    <div class="review">
+      <p>⭐⭐⭐⭐⭐ "Odlična podrška i tehničko znanje, sve preporuke!"</p>
+    </div>
+    <div class="review">
+      <p>⭐⭐⭐⭐⭐ "Kupio sam komplete senzora – stiglo brzo i sve radi kako treba."</p>
+    </div>
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>📧 Email: <a href="mailto:info@automatikapro.com">info@automatikapro.com</a></p>
+    <p>📞 Telefon: +387 61 000 000</p>
+    <p>📍 Lokacija: Lukavac, Bosna i Hercegovina</p>
+    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
   <footer>
-    <p>Kontakt: info@arduino-projekti.ba | © 2025 Arduino Projekti i Komponente</p>
+    <p>© 2025 Automatika Pro | Izradio Nusret Halilović</p>
   </footer>
 
 </body>
