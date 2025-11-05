@@ -5,16 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Automatika Pro - Arduino Projekti i Komponente</title>
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; background: #f7f9fc; color: #333;}
-    header {background: #0066cc; color: white; padding: 15px 0; text-align: center; position: sticky; top: 0;}
-    nav a {color: white; margin: 0 15px; text-decoration: none; font-weight: bold;}
-    section {padding: 50px 20px; max-width: 1000px; margin: auto;}
-    h2 {color: #0066cc;}
-    .back-btn {display: inline-block; margin-top: 20px; background: #0066cc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;}
-    .product {border: 1px solid #ddd; border-radius: 10px; padding: 15px; margin: 15px 0; background: white;}
-    .product img {width: 100%; border-radius: 10px;}
-    .review {background: #e9f2ff; padding: 20px; border-radius: 10px; margin: 10px 0;}
-    footer {background: #003366; color: white; text-align: center; padding: 15px; margin-top: 50px;}
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f9fc;
+      color: #333;
+    }
+    header {
+      background: #0066cc;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 70px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #0066cc;
+      margin-bottom: 15px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: #004c99;
+    }
+    .hero {
+      background: url('mca.png') no-repeat center center/cover;
+      color: white;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+    .hero h1 {
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 2.5em;
+    }
+    .hero p {
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+      max-width: 700px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+      background: white;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .review {
+      background: #e9f2ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-style: italic;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
@@ -32,27 +115,29 @@
     </nav>
   </header>
 
-  <section id="pocetna">
-    <h2>Dobrodošli u Automatika Pro</h2>
-    <p>Pružamo profesionalne usluge Arduino programiranja, automatizacije i projektovanja industrijskih i kućnih sistema.</p>
-    <img src="https://cdn.pixabay.com/photo/2016/06/07/18/27/arduino-1442872_1280.jpg" width="100%" alt="Arduino">
-    <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
+  <section id="pocetna" class="hero">
+    <h1>Profesionalni Arduino i automatski sistemi</h1>
+    <p>Dobrodošli u Automatika Pro – mjesto gdje ideje postaju stvarnost kroz inovativna rješenja bazirana na Arduino tehnologiji i automatizaciji procesa.</p>
+    <a class="back-btn" href="#onama">Saznaj više</a>
   </section>
 
   <section id="onama">
     <h2>O nama</h2>
-    <p>Naš tim se bavi projektovanjem automatike, razvojem Arduino sistema, pametnih uređaja i integracijom senzora.  
-    Imamo višegodišnje iskustvo u industriji i cilj nam je donijeti moderne tehnologije svakome ko želi unaprijediti svoje okruženje.</p>
+    <p>Automatika Pro je tim entuzijasta i stručnjaka sa višegodišnjim iskustvom u industriji automatizacije, elektronike i programiranja. Naša misija je da unaprijedimo svakodnevni život kroz inteligentne sisteme koji štede energiju, povećavaju efikasnost i pružaju udobnost.</p>
+    <p>Bavimo se razvojem i implementacijom automatizovanih sistema koristeći Arduino platforme, senzore, motore i mikrokontrolere. Naši projekti su zastupljeni u industrijskim postrojenjima, pametnim kućama i edukativnim laboratorijama.</p>
     <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
   <section id="usluge">
     <h2>Usluge</h2>
+    <p>Nudimo širok spektar profesionalnih usluga u oblasti automatike i elektronike. Naš cilj je da svaka ideja postane funkcionalan projekat koji radi stabilno i pouzdano.</p>
     <ul>
-      <li>Arduino programiranje i razvoj</li>
-      <li>Izrada prototipa i testiranje sistema</li>
-      <li>Automatizacija mašina i kućnih uređaja</li>
+      <li>Arduino programiranje i razvoj prototipa</li>
+      <li>Automatizacija mašina i uređaja</li>
+      <li>Izrada sistema za pametne kuće</li>
       <li>Integracija senzora, motora i aktuatora</li>
+      <li>Izrada elektronskih ploča po narudžbi</li>
+      <li>Konsultacije i tehnička podrška</li>
     </ul>
     <img src="https://cdn.pixabay.com/photo/2018/03/30/13/14/technology-3270462_1280.jpg" width="100%" alt="Automatika">
     <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
@@ -60,37 +145,58 @@
 
   <section id="projekti">
     <h2>Projekti</h2>
-    <p>Primjeri naših projekata uključuju sustave za pametno navodnjavanje, regulaciju temperature i automatske pokretače vrata.</p>
+    <p>Naši projekti su razvijeni sa ciljem da povežu praktično znanje i savremenu tehnologiju. Radimo na razvoju rješenja za navodnjavanje, kontrolu temperature, pametnu rasvjetu i industrijske procese.</p>
+    <ul>
+      <li>Pametni sistem za navodnjavanje sa senzorima vlage i automatskim ventilima.</li>
+      <li>Kontroler za grijanje i ventilaciju sa temperaturnim senzorima.</li>
+      <li>Automatizovana traka za transport sa senzorima blizine i motorima.</li>
+    </ul>
     <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/sensor-1287782_1280.jpg" width="100%" alt="Projekt senzor">
     <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
   <section id="prodaja">
     <h2>Prodaja Arduino dijelova</h2>
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/sensor-1287782_1280.jpg" alt="Senzor temperature">
-      <h3>Senzor temperature DHT11</h3>
-      <p>Cijena: 8 KM</p>
-    </div>
+    <p>U našoj ponudi se nalazi širok asortiman Arduino komponenti i elektronskih dijelova. Sve komponente su testirane i spremne za upotrebu u vašim projektima.</p>
+
     <div class="product">
       <img src="https://cdn.pixabay.com/photo/2016/02/19/11/53/motor-1209656_1280.jpg" alt="DC motor">
       <h3>DC motor 12V</h3>
       <p>Cijena: 15 KM</p>
     </div>
-    <p>🧩 Možeš ručno dodati nove dijelove — samo kopiraj HTML blok <code>&lt;div class="product"&gt;...&lt;/div&gt;</code> i izmijeni naziv, sliku i cijenu.</p>
+
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/sensor-1287782_1280.jpg" alt="Senzor temperature">
+      <h3>Senzor temperature DHT11</h3>
+      <p>Cijena: 8 KM</p>
+    </div>
+
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2017/03/10/12/10/electronics-2136003_1280.jpg" alt="Arduino Uno">
+      <h3>Arduino Uno R3</h3>
+      <p>Cijena: 35 KM</p>
+    </div>
+
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/cable-1287781_1280.jpg" alt="Dupont kablovi">
+      <h3>Dupont kablovi (set 40 kom)</h3>
+      <p>Cijena: 6 KM</p>
+    </div>
+
+    <p>🧩 Nove dijelove možeš dodati ručno – kopiraj HTML blok <code>&lt;div class="product"&gt;...&lt;/div&gt;</code> i izmijeni podatke po potrebi.</p>
     <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
   <section id="recenzije">
     <h2>Recenzije korisnika</h2>
     <div class="review">
-      <p>⭐⭐⭐⭐⭐ "Brza izrada i odlična komunikacija. Arduino sistem radi savršeno!"</p>
+      <p>⭐⭐⭐⭐⭐ “Kupio sam komplet senzora i ploča – sve je stiglo brzo i radi savršeno. Odlična podrška!”</p>
     </div>
     <div class="review">
-      <p>⭐⭐⭐⭐⭐ "Odlična podrška i tehničko znanje, sve preporuke!"</p>
+      <p>⭐⭐⭐⭐⭐ “Automatika Pro mi je pomogla da završim projekt automatizacije vrata. Profesionalno i brzo.”</p>
     </div>
     <div class="review">
-      <p>⭐⭐⭐⭐⭐ "Kupio sam komplete senzora – stiglo brzo i sve radi kako treba."</p>
+      <p>⭐⭐⭐⭐⭐ “Kvalitetne komponente i odlična komunikacija. Sve preporuke!”</p>
     </div>
     <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
@@ -100,6 +206,7 @@
     <p>📧 Email: <a href="mailto:info@automatikapro.com">info@automatikapro.com</a></p>
     <p>📞 Telefon: +387 61 000 000</p>
     <p>📍 Lokacija: Lukavac, Bosna i Hercegovina</p>
+    <p>Kontaktirajte nas za više informacija, ponude ili saradnju na projektima.</p>
     <a class="back-btn" href="#pocetna">⬆ Nazad na početak</a>
   </section>
 
